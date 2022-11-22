@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+    <body style="width:400px; margin:0 auto;">
+        <!-- Форма реєстрації користувача + Extra -->
+        <form style="border:1px solid black;">
+            <fieldset>
+                <legend>Дані акаунта</legend>
+                <div>
+                    <label for="name">
+                        Повне ім'я
+                    </label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="password">
+                        Пароль
+                    </label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div>
+                    <label for="password_again">
+                        Пароль ще раз
+                    </label>
+                    <input type="password" name="password_again" id="password_again" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Особисті дані</legend>
+                <div>
+                    <span>Стать</span>
+                    <input type="radio" name="gender" id="man" value="man" checked>
+                    <label for="man">Чоловіча</label>
+                    <input type="radio" name="gender" id="woman" value="woman">
+                    <label for="woman">Жіноча</label>
+                </div>
+                <div>
+                    <label for="age">Вік</label>
+                    <input type="number" id="age" name="age" min="18" max="99">
+                </div>
+                <div>
+                    <label for="profile_picture">
+                        Завантажте фото профілю
+                    </label>
+                    <input id="profile_picture" type="file" name="file">
+                </div>
+                <div>
+                    <label for="adress">
+                        Повна адреса
+                    </label>
+                    <textarea
+                        id="adress"
+                        name="adress"
+                        rows="5"
+                        cols="30"
+                        placeholder="Крайна, регіон, місто/селище, вулиця"
+                        required></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Тип акаунта</legend>
+                <div>
+                    <span>Курс</span>
+                    <select name="course" required>
+                        <option value="" disabled selected>Оберіть курс</option>
+                        <option value="front_end">Front-End</option>
+                        <option value="back_end">Back-End</option>
+                        <option value="pm">Project Management</option>
+                        <option value="qa">QA Manual</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="teacher">
+                        Викладач
+                    </label>
+                    <input id="teacher" type="radio" name="account_type" value="teacher" checked>
+                    <label for="student">
+                        Студент
+                    </label>
+                    <input id="student" type="radio" name="account_type" value="student">
+                </div>
+                <div>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Я погоджуюсь з обробкою персональних даних</label>
+                </div>
+            </fieldset>
+            <button type="reset">Очистити форму</button>
+            <button type="submit">Зареєструватися</button>
+        </form>
+    </body>
+</html>
